@@ -62,26 +62,28 @@
           }
           // No need to change anything ABOVE this line ^
 
-          return(
-              <h1>Draw a Card</h1>
-              <button onClick={}>
-                Click to Draw a Card
-              </button>
-              <button onClick={shuffle}>
-                Return Cards and Shuffle Deck
-              </button>
-              <div style={handStyles}>
-                {this.state.hand.map((card, index) => {
-                  return (
-                    <div style={cardStyles} key={index}>
-                      {card}
-                    </div>
-                  )
-                })}
-              </div>
-          )
-        }
-      }
+            return(
+            <>
+            <h1>Draw a Card</h1>
+          <button onClick={this.drawCard}>
+            Click to Draw a Card
+          </button>
+          <button onClick={this.shuffle}>
+            Return Cards and Shuffle Deck
+          </button>
+          <div style={handStyles}>
+            {this.state.hand.map((card, index) => {
+              return (
+                <div style={cardStyles} key={index}>
+                  {card}
+                </div>
+              )
+            })}
+          </div>
+          </>
+      )
+    }
+  }
 
       // No need to change anything below this line
       const domContainer = document.querySelector('#react-container')
